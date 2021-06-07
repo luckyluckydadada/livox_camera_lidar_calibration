@@ -110,7 +110,7 @@ void writePointCloud(const string filename, const vector<pointData> singlePCD) {
 }
 
 void dataSave() {
-    string outputName = output_path + int2str(threshold_lidar)) + ".pcd";
+    string outputName = output_path + int2str(threshold_lidar) + ".pcd";
     writeTitle(outputName, vector_data.size());
     writePointCloud(outputName, vector_data);
 }
