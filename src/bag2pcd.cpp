@@ -28,7 +28,7 @@ int threshold_lidar;
 void loadAndSavePointcloud();
 void writeTitle(const string filename, unsigned long point_num);
 void writePointCloud(const string filename, const vector<pointData> singlePCD);
-void dataSave(int index);
+void dataSave();
 
 void loadAndSavePointcloud() {
     string path = input_bag_path;
@@ -70,7 +70,7 @@ void loadAndSavePointcloud() {
             break;
         }
     }
-    dataSave(index);
+    dataSave();
     vector_data.clear();
 }
 
@@ -109,8 +109,8 @@ void writePointCloud(const string filename, const vector<pointData> singlePCD) {
     }
 }
 
-void dataSave(int index) {
-    string outputName = output_path + int2str(index) + ".pcd";
+void dataSave() {
+    string outputName = output_path + int2str(threshold_lidar)) + ".pcd";
     writeTitle(outputName, vector_data.size());
     writePointCloud(outputName, vector_data);
 }

@@ -1,5 +1,14 @@
 [English document](../README.md)
 ## 新增feature
+bag2pcd:将录制的bag输出为pcd文件。
+参数：
+    input: bag的路径
+    output： pcd的路径
+    threshold： 帧数，10代表1s。
+命令：
+    roslaunch camera_lidar_calibration bag2pcd.launch input:=/home/$USER/color_pcd/scenes1/86.bag output:=/home/$USER/color_pcd/scenes1/ threshold:=10
+命令解释：
+    将86.bag(86代表这个bag文件含点云86帧)输出为10.pcd（10代表10帧一个pcd，既1秒）
 
 
 
