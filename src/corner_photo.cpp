@@ -98,7 +98,9 @@ int main(int argc, char **argv) {
     cv::Size imageSize = src_img.size();
     cv::initUndistortRectifyMap(cameraMatrix, distCoeffs, cv::Mat(),cv::getOptimalNewCameraMatrix(cameraMatrix, distCoeffs, imageSize, 1, imageSize, 0), imageSize, CV_16SC2, map1, map2);
     cv::remap(src_img, src_img, map1, map2, cv::INTER_LINEAR);  // correct the distortion
-
+    
+    // cv::imwrite(photo_path+".bak.bmp",src_img);
+    
     cout << "Please note the four corners, and then tap a random key to give the coordinate" << endl;
     // cv::namedWindow("source", CV_WINDOW_KEEPRATIO);
     cv::namedWindow("source");

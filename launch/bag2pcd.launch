@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <arg name="arg1" default="/home/yjiankeji/lidar/color_pcd/scenes1/86.bag"/>
+    <param name="input_bag_path"        value="$(arg arg1)" />  <!-- rosbag folder -->
+    <param name="output_pcd_path"       value="/home/yjiankeji/lidar/color_pcd/scenes1" />  <!-- path to save new pcd files --> 
+    <param name="threshold_lidar"       type="int" value="20" />  <!-- the limit of messages to transfer to the pcd file, 80 means maximum 80 messages of lidar -->
+    <node pkg="camera_lidar_calibration" name="bag2pcd" type="bag2pcd" output="screen"></node>
+
+</launch>
