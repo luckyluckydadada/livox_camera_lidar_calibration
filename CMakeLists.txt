@@ -67,11 +67,9 @@ target_link_libraries(getExt2 ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${CERES_LI
 add_executable(projectCloud src/projectCloud.cpp src/common.h)
 target_link_libraries(projectCloud ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
-add_executable(bag2pcd src/bag2pcd.cpp src/common.h)
-target_link_libraries(bag2pcd ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
-
 add_executable(colorLidar src/color_lidar_display.cpp src/common.h)
 target_link_libraries(colorLidar ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} ${CERES_LIBRARIES})
 
-
+add_executable(customMsgbag2pcd src/customMsgbag2pcd.cpp src/common.h)
+target_link_libraries(customMsgbag2pcd ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 

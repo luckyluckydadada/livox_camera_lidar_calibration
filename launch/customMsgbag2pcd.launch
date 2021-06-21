@@ -8,6 +8,6 @@
     <param name="output_pcd_path"       value="$(arg output)" />  <!-- path to save new pcd files --> 
     <param name="threshold_lidar"       type="int" value="$(arg threshold)" />  <!-- the limit of messages to transfer to the pcd file, 80 means maximum 80 messages of lidar -->
     
-    <node pkg="camera_lidar_calibration" name="bag2pcd" type="bag2pcd" output="screen"></node>
+    <node pkg="camera_lidar_calibration" name="customMsgbag2pcd" type="customMsgbag2pcd" output="screen"></node>
 
 </launch>
