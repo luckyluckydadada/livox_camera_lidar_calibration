@@ -1,5 +1,5 @@
 [English document](../README.md)
-## 新增feature
+## 新增feature1
 bag2pcd:将录制的非彩色bag(livox_ros_driver/CustomMsg)输出为pcd(ascii)文件。
 ```
 参数：
@@ -12,7 +12,14 @@ bag2pcd:将录制的非彩色bag(livox_ros_driver/CustomMsg)输出为pcd(ascii)�
 命令解释：
     将86.bag(86代表这个bag文件含点云86帧)输出为10.pcd（10代表10帧一个pcd，既1秒）
 ```
+## 新增feature2
+```
+coner_photo2.cpp 不用save照片后用Windows的画图软件标点，可以鼠标直接标点，
+但是由于无法缩放照片（超出显示屏幕范围），所以照片resize为原来的一半，标记的点的坐标为原照的一半，
+输入的时候直接输入这个半价坐标就好，该cpp会自动乘以2。
 
+使用的时候将coner_photo2.cpp 重命名为coner_photo.cpp ；将coner_photo.cpp 重命名为coner_photo2.cpp
+```
 
 ## 相机雷达标定文档
 
